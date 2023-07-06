@@ -4,7 +4,7 @@ const routerUser = express.Router();
 
 routerUser.post('/register', (req, res) => {
   // Отримання даних з тіла запиту
-  const { firstname,secondname, email, password, level } = req.body;
+  const { firstname,secondname, email, password, level, language } = req.body;
 
   // Перевірка, чи існує користувач з таким email
   User.findOne({ email })
@@ -15,7 +15,7 @@ routerUser.post('/register', (req, res) => {
       }
 
       // Створення нового користувача
-      const newUser = new User({ firstname,secondname, email, password, level });
+      const newUser = new User({ firstname,secondname, email, password, level, language });
 
       // Збереження нового користувача в базі даних
       newUser.save()

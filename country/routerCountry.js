@@ -4,60 +4,68 @@ import  { FirstGroupIndicators, SecondGroupIndicators, ThirdGroupIndicator } fro
 const routerCountry = express.Router();
 
 routerCountry.post('/api/first-group-indicators', async (req, res) => {
-  const { countryCode, year, currentGDP, previousGDP, population } = req.body;
+  const formData = req.body;
+  const newIndicator = new FirstGroupIndicators(formData);
 
   try {
-    const newFirstGroupIndicators = new FirstGroupIndicators({
-      countryCode,
-      year,
-      currentGDP,
-      previousGDP,
-      population,
-    });
+    // Перевірка наявності об'єкта в базі даних за countryCode
+    const existingIndicator = await FirstGroupIndicators.findOne({ countryCode: newIndicator.countryCode });
+    if (existingIndicator) {
+      // Об'єкт вже існує в базі даних, повертаємо помилку 409 Conflict
+      return res.sendStatus(409);
+    }
 
-    await newFirstGroupIndicators.save();
-    res.json({ message: 'Дані успішно збережено' });
-  } catch (error) {
-    console.error('Помилка при збереженні даних:', error);
-    res.status(500).json({ error: 'Помилка при збереженні даних' });
+    // Збереження нового об'єкта в базі даних
+    await newIndicator.save();
+    res.sendStatus(200);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
   }
 });
 
 routerCountry.post('/api/second-group-indicators', async (req, res) => {
-  const { countryCode, budgetPercent, inflation, unemployment, debtPercent, happyLevel, qualityLife, corruption, goldReserv, averageSalary } = req.body;
+  const formData = req.body;
+  const newIndicator = new SecondGroupIndicators(formData);
 
   try {
-    const newSecondGroupIndicators = new SecondGroupIndicators({
-      countryCode,
-      budgetPercent,
-      inflation,
-      unemployment,
-      debtPercent,
-      happyLevel,
-      qualityLife,
-      corruption,
-      goldReserv,
-      averageSalary
-    });
+    // Перевірка наявності об'єкта в базі даних за countryCode
+    const existingIndicator = await SecondGroupIndicators.findOne({ countryCode: newIndicator.countryCode });
+    if (existingIndicator) {
+      // Об'єкт вже існує в базі даних, повертаємо помилку 409 Conflict
+      return res.sendStatus(409);
+    }
 
-    await newSecondGroupIndicators.save();
-    res.json({ message: 'Дані успішно збережено' });
-  } catch (error) {
-    console.error('Помилка при збереженні даних:', error);
-    res.status(500).json({ error: 'Помилка при збереженні даних' });
+    // Збереження нового об'єкта в базі даних
+    await newIndicator.save();
+    res.sendStatus(200);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
   }
 });
+
 routerCountry.post('/api/third-group-indicators', async (req, res) => {
-    const formData = req.body;
-    const newIndicator = new ThirdGroupIndicator(formData);
-  
-    try {
-      await newIndicator.save();
-      res.sendStatus(200);
-    } catch (err) {
-      console.error(err);
-      res.sendStatus(500);
+  const formData = req.body;
+  const newIndicator = new ThirdGroupIndicator(formData);
+
+  try {
+    // Перевірка наявності об'єкта в базі даних за countryCode
+    const existingIndicator = await ThirdGroupIndicator.findOne({ countryCode: newIndicator.countryCode });
+    if (existingIndicator) {
+      // Об'єкт вже існує в базі даних, повертаємо помилку 409 Conflict
+      return res.sendStatus(409);
     }
-  });
+
+    // Збереження нового об'єкта в базі даних
+    await newIndicator.save();
+    res.sendStatus(200);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
+
   
 export default routerCountry;

@@ -85,6 +85,37 @@ routerUser.put('/user/:id', async (req, res) => {
     res.status(500).json({ error: 'Сталась помилка на сервері' });
   }
 });
+routerUser.get('/userlan/:userId', async (req, res) => {
+  try {
+    const userId = req.params.userId;
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.json({ language: user.language });
+  } catch (error) {
+    console.error('Error getting user language', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+routerUser.put('/userlan/:userId', async(req, res) =>{
+  try {
+    const {userId} = req.params;
+    const {Lan} = req.body;
+    const updatedUser = await User.findByIdAndUpdate(userId, { language:Lan }, { new: true })
+    if (!updatedUser) {
+      return res.status(404).json({ error: 'Користувач не знайдений' });
+    }
+    res.json({ message: 'Мова користувача оновлено', user: updatedUser });
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: 'Сталась помилка на сервері' });
+  }
+}
+)
 /* Видалення профілю*/
 routerUser.delete('/user/:id', async (req, res) => {
   try {

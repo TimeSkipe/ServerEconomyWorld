@@ -19,6 +19,7 @@ mongoose.connect(MongoDB,{ useNewUrlParser: true, useUnifiedTopology: true })
 app.use(cors({
   origin: CorsDomen, // Замініть на ваш домен
 }))
+
 app.use(routerUser);
 app.use(routerCountry);
 app.use(routerCountryList);

@@ -5,6 +5,12 @@ const firstGroupIndicatorsSchema = new mongoose.Schema({
     type: String,
     uppercase: true,
   },
+  Visible:{
+    type:String,
+  },
+  Continent:{
+    type:String,
+  },
   GDPGroup: [
     {
       year: Number,

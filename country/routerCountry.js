@@ -23,46 +23,48 @@ routerCountry.post('/api/first-group-indicators', async (req, res) => {
     res.sendStatus(500);
   }
 });
-
-routerCountry.post('/api/second-group-indicators', async (req, res) => {
-  const formData = req.body;
-  const newIndicator = new SecondGroupIndicators(formData);
+routerCountry.put('/api/indicators/:countryCode/hide', async (req, res) => {
+  const { countryCode } = req.params;
 
   try {
-    // Перевірка наявності об'єкта в базі даних за countryCode
-    const existingIndicator = await SecondGroupIndicators.findOne({ countryCode: newIndicator.countryCode });
-    if (existingIndicator) {
-      // Об'єкт вже існує в базі даних, повертаємо помилку 409 Conflict
-      return res.sendStatus(409);
+    // Знайти запис за countryCode
+    const indicator = await FirstGroupIndicators.findOne({ countryCode });
+
+    if (!indicator) {
+      return res.status(404).json({ error: 'Indicator not found' });
     }
 
-    // Збереження нового об'єкта в базі даних
-    await newIndicator.save();
-    res.sendStatus(200);
-  } catch (err) {
-    console.error(err);
-    res.sendStatus(500);
+    // Змінити значення Visible на "Invisible"
+    indicator.Visible = 'Invisible';
+    await indicator.save();
+
+    return res.json({ message: 'Indicator hidden' });
+  } catch (error) {
+    console.log('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 });
 
-routerCountry.post('/api/third-group-indicators', async (req, res) => {
-  const formData = req.body;
-  const newIndicator = new ThirdGroupIndicator(formData);
+// Маршрут для зміни значення Visible на "Visible"
+routerCountry.put('/api/indicators/:countryCode/show', async (req, res) => {
+  const { countryCode } = req.params;
 
   try {
-    // Перевірка наявності об'єкта в базі даних за countryCode
-    const existingIndicator = await ThirdGroupIndicator.findOne({ countryCode: newIndicator.countryCode });
-    if (existingIndicator) {
-      // Об'єкт вже існує в базі даних, повертаємо помилку 409 Conflict
-      return res.sendStatus(409);
+    // Знайти запис за countryCode
+    const indicator = await FirstGroupIndicators.findOne({ countryCode });
+
+    if (!indicator) {
+      return res.status(404).json({ error: 'Indicator not found' });
     }
 
-    // Збереження нового об'єкта в базі даних
-    await newIndicator.save();
-    res.sendStatus(200);
-  } catch (err) {
-    console.error(err);
-    res.sendStatus(500);
+    // Змінити значення Visible на "Visible"
+    indicator.Visible = 'Visible';
+    await indicator.save();
+
+    return res.json({ message: 'Indicator shown' });
+  } catch (error) {
+    console.log('Error:', error);
+    return res.status(500).json({ error: 'Internal server error' });
   }
 });
 

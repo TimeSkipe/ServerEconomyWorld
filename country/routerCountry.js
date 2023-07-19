@@ -1,5 +1,5 @@
 import express from 'express';
-import  { FirstGroupIndicators, SecondGroupIndicators, ThirdGroupIndicator } from './Schems.js';
+import  {FirstGroupIndicators} from './Schems.js';
 
 const routerCountry = express.Router();
 
@@ -69,5 +69,4 @@ routerCountry.put('/api/indicators/:countryCode/show', async (req, res) => {
 });
 
 
-  
 export default routerCountry;

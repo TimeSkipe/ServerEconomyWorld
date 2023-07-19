@@ -19,6 +19,10 @@ mongoose.connect(MongoDB,{ useNewUrlParser: true, useUnifiedTopology: true })
 app.use(cors({
   origin: CorsDomen, // Замініть на ваш домен
 }))
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Internal Server Error');
+});
 
 app.use(routerUser);
 app.use(routerCountry);

@@ -1,0 +1,154 @@
+.AccountListBar{
+    width: calc(100% - 30px);
+    margin: 0;
+    padding: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/*TableListBar*/
+
+.TableListBar{
+    width: 100%;
+}
+.TableListBar>div{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:35px;
+    color: white;
+    background-color: #434346;
+    border: 1px solid black;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.NumberList{
+    width: 100px;
+}
+.NameList{
+    width: calc(100% - 810px);
+}
+.EmailList{
+    width: 350px;
+}
+.LevelList{
+    width: 150px;
+}
+.ButtonsList{
+    width: 200px;
+}
+
+/*TableInfoBar*/
+
+.TableInfoBar{
+    height: 50px;
+}
+.TableInfoBar>div{
+    border: 1px solid black;
+    float: left;
+    color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #434346;
+    font-size: 18px;
+}
+.NumberInfo{
+    width: 85px;
+    padding-left: 15px;
+}
+.NameInfo{
+    width: calc(100% - 825px);
+    padding-left: 15px;
+}
+.EmailInfo{
+    width: 335px;
+    padding-left: 15px;
+}
+.LevelInfo{
+    width: 135px;
+    padding-left: 15px;
+}
+.ButtonsInfo{
+    width: 200px;
+    padding-left: -15px;
+    justify-content: space-around;
+}
+.EditAccountButton{
+    background-color: green;
+    border-radius: 24px;
+    transition: .3s ease-in-out;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    cursor: pointer;
+}
+.EditAccountButtonModerator{
+    background-color: grey;
+    border-radius: 24px;
+    transition: .3s ease-in-out;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    cursor: pointer;
+}
+.EditAccountButton:hover{
+    background-color: rgb(2, 90, 2);
+}
+.DeleteAccountButton{
+    background-color: red;
+    border-radius: 24px;
+    transition: .3s ease-in-out;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    cursor: pointer;
+}
+.DeleteAccountButton:hover{
+    background-color: rgb(148, 3, 3);
+}
+
+/*EditBar*/
+
+.EditBar{
+    height: 270px;
+    width: 370px;
+    border-radius: 24px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6E73FA;
+    padding: 15px;
+}
+.EditName{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.EditInput{
+    width: 100%;
+    font-size: 18px;
+    margin-top: 50px;
+}
+.EditButton{
+    color: white;
+    border-radius: 24px;
+    width: 100px;
+    background-color: green;
+    border: none;
+    height: 35px;
+    margin-left: 50%;
+    margin-top: 50px;
+    transform: translate(-50%, -0%);
+    font-size: 18px;
+}

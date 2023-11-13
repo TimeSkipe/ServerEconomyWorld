@@ -1,0 +1,173 @@
+.Header{
+    background-color: #434346;
+    height: 90px;
+    width: calc(100vw - 32px);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    position: relative;
+    z-index: 9999;
+}
+
+/*TitleBar*/
+
+.TitleBar{
+    font-size: 32px;
+    color: white;
+    float: left;
+}
+
+/*ManuBar*/
+
+.MenuBar{
+    float: left;
+    margin-left: 50px;
+}
+.MenuBar>div{
+    float: left;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 0px 31px;
+    height: 45px;
+    border-radius: 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.Active{
+    background-color: #6E73FA;
+}
+.MenuBar>div:hover{
+    background-color: #6E73FA;
+}
+/*Account*/
+
+.AccountBar{
+    background-color: #6E73FA;
+    border-radius: 24px;
+    height: 45px;
+    position: absolute;
+    right: 15px;
+    display: flex; /*Flex*/
+    justify-content: center;
+    align-items: center;
+}
+.AccountBar.Active{
+    border-radius: 24px 24px 0 0;
+}
+.AccountBar>.HiddeLanMenu.Active{
+    display: block;
+    height: 35px;
+    border-radius: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: .3s ease-in-out;
+}
+.AccountBar>.HiddeLanMenu.Active>img{
+    height: 100%;
+    border-radius: 50px;
+    width: 35px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.AccountBar>.HiddeLanMenu.Active>img:last-child{
+    margin-right: 0;
+}
+.AccountBar>.HiddeLanMenu{
+    display: none;
+    transition: .3s ease-in-out;
+}
+.AccountBar>.ImgAccount{
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 7px;
+    position: relative;
+    transition: .3s ease-in-out;
+}
+.AccountBar>.ImgAccount.Deactive{
+    display: none;
+}
+.AccountBar>.ImgAccount>img{
+    height: 100%;
+    border-radius: 50px;
+    width: 35px;
+    cursor: pointer;
+}
+
+.AccountBar>.NameAccount{
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 100%;
+    margin: 0 5px 0 0;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.SpanAccount{
+    width: 16px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.HiddeMenuAccount{
+    position: absolute;
+    top:45px;
+    background-color: #6E73FA;
+    width: 100%;
+    border-radius:  0 0 24px 24px;
+    overflow: hidden;
+}
+.HiddeMenuAccount>div{
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HiddeMenuAccount>div:hover{
+    background-color: #5457ad;
+}
+
+/*Register and SignIn buttons*/
+
+.RegisterButton{
+    height: 45px;
+    background-color: Grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    border-radius: 24px 0 0 24px;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+}
+.SignInButton{
+    height: 45px;
+    background-color: #5457ad;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    border-radius:  0 24px 24px 0;
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+}

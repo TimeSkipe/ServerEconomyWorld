@@ -1,0 +1,91 @@
+.CountriesBar{
+    position: relative;
+}
+
+/*Countries Buttons*/
+
+.CountriesButton{
+    background-color: #6E73FA;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border-radius: 24px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    position: absolute;
+    right: 15px;
+    top:10px;
+    z-index: 5;
+    transition: .3s ease-in-out;
+}
+.CountriesButton:hover{
+    background-color: #5457ad;
+}
+
+/*InteractiveMap*/
+
+.InteractiveMap{
+    background: #3d94f1;
+    background: -moz-linear-gradient(top,  #3d94f1 0%, #8ac9ff 100%);
+    background: -webkit-linear-gradient(top,  #3d94f1 0%,#8ac9ff 100%);
+    background: linear-gradient(to bottom,  #3d94f1 0%,#8ac9ff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d94f1', endColorstr='#8ac9ff',GradientType=0 );
+
+    width: 100vw;
+    height: calc(100vh - 90px);
+    position: relative;
+    overflow: hidden;
+}
+
+/*Continents*/
+
+.ContinentBar{
+    opacity: 0.5;
+    fill:white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.ContinentBar:hover{
+    fill:rgb(83, 83, 83);
+    opacity: 0.75;
+}
+
+/*ListBar*/
+
+.ListBar{
+    width: calc(100vw - 250px);
+    padding: 75px 125px; 
+}
+.RegionBar{
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.NameRegionBar{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: #6f6e7369;
+    margin-bottom: 10px;
+}
+.EveryCountriesBar>div{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 5px 0;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    float: left;
+    width: 25%;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.EveryCountriesBar>div:hover{
+    color: rgb(189, 189, 189);
+}

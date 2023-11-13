@@ -1,0 +1,465 @@
+.CountryList{
+    padding: 15px;
+}
+.CountryBar{
+    background-color: #212022;
+    min-height: 50px;
+    height: 100%;
+    border-radius: 10px;
+    width: 100%;
+    color:white;
+    float: left;
+    margin-bottom: 5px;
+    position: relative;
+}
+.CountryNumber{
+    float: left;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CountryCode{
+    float: left;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CountryTitle{
+    float: left;
+    height: 50px;
+    display: flex;
+    padding: 0 10px;
+    justify-content: center;
+    align-items: center;
+}
+.CountryButtons{
+    float: right;
+}
+.CountryButtons>div{
+    float: left;
+}
+.CountryButtons>.Edit{
+    background-color: #4A7A4C;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+.CountryButtons>.Edit:hover{
+    background-color: rgba(15, 91, 15, 0.816);
+}
+.CountryButtons>.Delete{
+    background-color: #943939;
+    border-radius:12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+.CountryButtons>.Delete:hover{
+    background-color: rgba(91, 15, 15, 0.816);
+}
+.CountryButtons>.HiddenBut{
+    background-color: #943939;
+    border-radius:12px;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+.CountryButtons>.HiddenBut:hover{
+    background-color: rgba(91, 15, 15, 0.816);
+}
+.CountryButtons>.VisibleBut{
+    background-color: #4A7A4C;
+    border-radius:12px;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 100px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+.CountryButtons>.VisibleBut:hover{
+    background-color: rgba(15, 91, 15, 0.816);
+}
+.hiddeBar{
+    width: 100%;
+    display: block;
+    min-height:560px;
+    height: 100%;
+    position: relative;
+    top:0px;
+    float: left;
+}
+
+/*TableWithInformation*/
+.TableWithInformation{
+    height: 580px;
+    width: 100%;
+    display: block;
+    
+}
+
+
+/*FirstBlockTitle*/
+.FirstBlockTitle{
+    width: 320px;
+    float: left;
+}
+.Fr-TitleBl{
+    width: calc(100% - 10px);
+    height: 30px;
+    display: flex;
+    color: white;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: 10px;
+    border-bottom: 0.5px solid white;
+}
+
+
+/*Fr-FrInd*/
+.Fr-FrInd{
+    width: 100%;
+    border-bottom: 0.5px solid white;
+    border-right: 0.5px solid white;
+}
+.Fr-FrInd>div{
+    height: 30px;
+    padding-left: 10px;
+    width: calc(100% - 10px); 
+    display: flex;
+    align-items: center;
+}
+
+/*Fr-SecInd*/
+.Fr-SecInd{
+    width: 100%;
+    border-bottom: 0.5px solid white;
+    border-right: 0.5px solid white;
+}
+.Fr-SecInd>div{
+    height: 30px;
+    padding-left: 10px;
+    width: calc(100% - 10px); 
+    display: flex;
+    align-items: center;
+}
+
+/*Fr-ThirdInd*/
+.Fr-ThirdInd{
+    width: 100%;
+    border-bottom: 0.5px solid white;
+    border-right: 0.5px solid white;
+}
+.Fr-ThirdInd>div{
+    height: 30px;
+    padding-left: 10px;
+    width: calc(100% - 10px); 
+    display: flex;
+    align-items: center;
+}
+
+
+/*SecondBlockInput*/
+.SecondBlockInput{
+    float: left;
+    transition: .2s ease-in-out;
+    width: 40px;
+}
+.Sc-Void{
+    height: 30px;
+    border-bottom: 0.5px solid white;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput{
+    float: left;
+    transition: .2s ease-in-out;
+    width: 300px;
+}
+
+/*Sc-FrIn*/
+.SecondBlockInput>.Sc-FrIn{
+    width: 100%;
+    border-bottom: 0.5px solid white;
+    border-right: 0.5px solid white;
+}
+.SecondBlockInput>.Sc-FrIn>.Void{
+    height: 30px;
+    border-top: 0.5px solid white;
+    border-bottom: 0.5px solid white;
+}
+.SecondBlockInput>.Sc-FrIn>form>div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SecondBlockInput>.Sc-FrIn>form>div>input:nth-child(1){
+    width: 80%;
+    height: 80%;
+    border: none;
+    background-color:#212022;
+    border-bottom: 0.5px solid white;
+}
+.SecondBlockInput>.Sc-FrIn>form>div>input:nth-child(2){
+    display: none;
+}
+.SecondBlockInput>.Sc-FrIn>form>div>.button{
+    display: none;
+}
+.SecondBlockInput>.Sc-FrIn>form>div>button{
+    background-color: #4A7A4C;
+    border: none;
+    color: white;
+    height: 20px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.SecondBlockInput>.Sc-FrIn>form>div>button:hover{
+    background-color: #304e31;
+}
+/*Sc-FrIn activait*/
+
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>input:nth-child(1){
+    width: 60%;
+    height: 80%;
+    border: none;
+    float: left;
+    background-color:#212022;
+    border-bottom: 0.5px solid white;
+    color: white;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>input:nth-child(2){
+    width: 15%;
+    height: 80%;
+    float: left;
+    border: none;
+    display: block;
+    background-color:#212022;
+    border-bottom: 0.5px solid white;
+    color: white;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>.button{
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4A7A4C;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>.button:hover{
+    background-color: #304e31;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>button{
+    background-color: #4A7A4C;
+    border: none;
+    color: white;
+    height: 20px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+    
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>button:hover{
+    background-color: #304e31;
+}
+.hiddeBar.Activait>.TableWithInformation>.SecondBlockInput>.Sc-FrIn>form>div>.Parther{
+    background-color: blue;
+}
+
+/*ThirdBlockInfo*/
+.hiddeBar>.TableWithInformation>.ThirdBlockInfo{
+    float: left;
+    height: 100%;
+    width: calc(100% - 360px); /*320 40 300*/
+    transition: .2s ease-in-out;
+    
+}
+.hiddeBar.Activait>.TableWithInformation>.ThirdBlockInfo{
+    width: calc(100% - 620px);
+}
+.BlockColumnsInfo{
+    width: 100%;
+    overflow-x: scroll;
+    height:"210px"
+}
+.BlockColumnsInfo>div{
+    height: 100%;
+}
+.ColumnInfo{
+    border-left: 0.5px solid white;
+
+    width: 150px;
+    float: left;
+}
+.ColumnInfo>.TitleColumn{
+    height: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-bottom: .5px solid white;
+}
+.ColumnInfo>div{
+    height: 30px;
+}
+.ColumnInfo>div:last-child{
+    height: 28px;
+}
+.ColumnInfo>.BlockVoid{
+    border-bottom: 0.5px solid white;
+    height: 30px;
+}
+.ColumnInfo>.BlockVoidLast{
+    height: 25px;
+}
+.ColumnInfo>div>.BarCol>.BarColText{
+    float: left;
+    width: calc(100% - 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.ColumnInfo>div>.BarCol>.DeleteButton{
+    background-color: #943939;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.ColumnInfo>div>.BarCol>.DeleteButton>svg{
+    height: 80%;
+}
+.ColumnInfo>div>.BarCol>.DeleteButton:hover{
+    background-color: #722e2e;
+}
+/*RowInfo*/
+.RowInfo{
+    width: 100%;
+    float: left;
+    border-bottom: 0.5px solid white;
+}
+.RowInfo>div{
+    width: 100%;
+    height: 30px;
+    float: left;
+}
+.RowInfo>.BarPartner>div{
+    float: left;
+    font-size: 16px;
+    margin-left: 5px;
+    background-color: #363538;
+    border-radius: 5px;
+    padding: 0 5px;
+    margin-top: 2.5px;
+}
+.RowInfo>.BarPartner>div>div{
+    float: left;
+    margin-right: 5px;
+}
+.RowInfo>.BarPartner>div>div:last-child{
+    background-color: #943939;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    margin-top: 4px;
+}
+.RowInfo>.BarPartner>div>div:last-child>svg{
+    height: 80%;
+}
+.RowInfo>.BarPartner>div>div:last-child:hover{
+    background-color: #722e2e;
+}
+
+/*CreateCountryBlock*/
+.CreateCountryBlock{
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid white;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    display: block;
+    color: white;
+    margin-bottom: 10px;
+}
+.CreateCountryBlock>form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.CreateCountryBlock>form>input{
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: #313033;
+    border: none;
+    outline: none;
+}
+.CreateCountryBlock>form>button{
+    background-color: #4A7A4C;
+    border: none;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    width: 190px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+.CreateCountryBlock>form>button:hover{
+    background-color: #304e31;
+}
